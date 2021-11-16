@@ -1,36 +1,48 @@
-# This is a basic workflow to help you get started with Actions
+name: Dependent Issues
 
-name: CI
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - reopened
+      # Makes sure we always add status check for PRs. Useful only if
+      # this action is required to pass before merging. Can be removed
+      # otherwise.
+      - synchronize
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  # Schedule a daily check. Useful if you reference cross-repository
+  # issues or pull requests. Can be removed otherwise.
+  schedule:
+    - cron: '0 0 * * *'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  check:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: z0al/dependent-issues@v1
+        env:
+          # (Required) The token to use to make API calls to GitHub.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # (Optional) The token to use to make API calls to GitHub for remote repos.
+          GITHUB_READ_TOKEN: ${{ secrets.GITHUB_READ_TOKEN }}
+        with:
+          # (Optional) The label to use to mark dependent issues
+          label: dependent
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+          # (Optional) Enable checking for dependencies in issues.
+          # Enable by setting the value to "on". Default "off"
+          check_issues: off
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          # (Optional) Ignore dependabot PRs.
+          # Enable by setting the value to "on". Default "off"
+          ignore_dependabot: off
+
+          # (Optional) A comma-separated list of keywords. Default
+          # "depends on, blocked by"
+          keywords: depends on, blocked by
