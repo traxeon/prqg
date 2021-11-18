@@ -39,7 +39,7 @@ $config['email'] = true;
  *     'recipient2@example.com'
  * );
  */
-$config['recipients'] = '';
+$config['recipients'] = 'ken.kauffman@me.com';
 
 /**
  * Set the "From" address of the emails. You should set this to the contact
@@ -59,7 +59,7 @@ $config['recipients'] = '';
  *
  * $config['from'] = '%email%';
  */
-$config['from'] = '';
+$config['from'] = array('prqgsomd@gmail.com' => 'PRQ Guild');
 
 /**
  * The subject of the notification email message. %name% will be replaced
@@ -161,11 +161,11 @@ $config['uploadUrl'] = '';
  * encryption - SMTP encryption (e.g. ssl or tls)
  */
 $config['smtp'] = array(
-    'host' => '',
-    'port' => 25,
-    'username' => '',
-    'password' => '',
-    'encryption' => ''
+    'host' => 'smtp.gmail.com',
+    'port' => 465,
+    'username' => 'kenneth.kauffman@gmail.com',
+    'password' => 'yarzpzjqehxxwkbq',
+    'encryption' => 'ssl'
 );
 
 /**
@@ -211,16 +211,37 @@ $message->addValidator('required');
 $form->addElement($message);
 
 /**
+ * Configure the topic element
+ * Filters: Trim
+ * Validators: Required
+ */
+
+$topic = new Quform_Element('topic', 'Topic');
+$topic->addFilter('trim');
+$topic->addValidator('required');
+$form->addElement($topic);
+
+/**
  * Configure the CAPTCHA element
  * Filters: Trim
  * Validators: Required, Identical
  */
-$captcha = new Quform_Element('type_the_word', 'Type the word');
-$captcha->addFilter('trim');
-$captcha->addValidator('required');
-$captcha->addValidator('identical', array('token' => 'catch'));
-$captcha->setIsHidden(true);
-$form->addElement($captcha);
+/* $captcha = new Quform_Element('type_the_word', 'Type the word');
+/* $captcha->addFilter('trim');
+/* $captcha->addValidator('required');
+/* $captcha->addValidator('identical', array('token' => 'catch'));
+/* $captcha->setIsHidden(true);
+/* $form->addElement($captcha); */
+
+$recaptcha = new Quform_Element('g-recaptcha-response', 'reCAPTCHA');
+$recaptcha->addValidator('required');
+$recaptcha->addValidator('recaptcha', array(
+    'secretKey' => '6LcmeEAdAAAAABrtkEz9RQB1EinnvzXAb9-j6kFC',
+    'version' => 'v3',
+    'threshold' => 0.5
+));
+$recaptcha->setIsHidden(true);
+$form->addElement($recaptcha);
 
 /** END FORM ELEMENT CONFIGURATION **/
 
