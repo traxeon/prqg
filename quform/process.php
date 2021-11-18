@@ -34,7 +34,7 @@ $config['email'] = true;
  * You can add multiple email addresses by adding one on each line inside an
  * array, enclosed in quotes, separated by commas. E.g.
  *
- * $config['recipients'] = array(
+ * $config['recipients'] = array(/the///
  *     'recipient1@example.com',
  *     'recipient2@example.com'
  * );
@@ -181,11 +181,22 @@ $config['smtp'] = array(
 /** FORM ELEMENT CONFIGURATION **/
 
 /**
+ * Configure the topic element
+ * Filters: Trim
+ * Validators: Required
+ */
+
+$topic = new Quform_Element('topic', 'Topic: ');
+$topic->addFilter('trim');
+$topic->addValidator('required');
+$form->addElement($topic);
+
+/**
  * Configure the first name element
  * Filters: Trim
  * Validators: Required
  */
-$name = new Quform_Element('name', 'Name');
+$name = new Quform_Element('name', 'From: ');
 $name->addFilter('trim');
 $name->addValidator('required');
 $form->addElement($name);
@@ -195,7 +206,7 @@ $form->addElement($name);
  * Filters: Trim
  * Validators: Required, Email
  */
-$email = new Quform_Element('email', 'Email address');
+$email = new Quform_Element('email', 'From e-mail: ');
 $email->addFilter('trim');
 $email->addValidators(array('required', 'email'));
 $form->addElement($email);
@@ -205,21 +216,10 @@ $form->addElement($email);
  * Filters: Trim
  * Validators: Required
  */
-$message = new Quform_Element('message', 'Message');
+$message = new Quform_Element('message', 'Message: ');
 $message->addFilter('trim');
 $message->addValidator('required');
 $form->addElement($message);
-
-/**
- * Configure the topic element
- * Filters: Trim
- * Validators: Required
- */
-
-$topic = new Quform_Element('topic', 'Topic');
-$topic->addFilter('trim');
-$topic->addValidator('required');
-$form->addElement($topic);
 
 /**
  * Configure the CAPTCHA element
