@@ -1,0 +1,531 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>The Practice - Shortcodes: Tabs &amp; Toggles</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="http://fonts.googleapis.com/css?family=Cardo:400italic,400|Lato:400,400italic,700" rel="stylesheet">
+
+<!-- Mobile viewport optimized: h5bp.com/viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- favicon.ico and apple-touch-icon.png -->
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon-57x57-iphone.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114-iphone4.png">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="screen.css">
+<!-- custom CSS -->
+<link rel="stylesheet" href="custom.css">
+
+<!-- All JavaScript at the bottom, except this Modernizr build.  -->
+<script src="js/libs/modernizr-2.5.3.min.js"></script>
+<script src="js/libs/respond.min.js"></script>					 
+
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="js/libs/jquery.min.js"></script>
+
+<!-- #scripts  -->
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/general.js"></script>
+<!-- carousel -->
+<script src="js/jquery.jcarousel.min.js"></script>
+<!-- sliders -->
+<script src="js/slides.min.jquery.js"></script>
+<!-- shortcode: Tabs -->
+<script src="js/jquery.tools.min.js"></script>
+<!-- shortcode: Lightbox prettyPhoto -->
+<link rel="stylesheet" href="css/prettyPhoto.css" media="all">
+<script src="js/jquery.prettyPhoto.js"></script>
+<!-- SyntaxHighlighter for shortcodes -->
+<script src="js/shCore.js"></script>
+<script src="js/shBrushPlain.js"></script>
+<link rel="stylesheet" href="css/shCore.css" media="all">
+<link rel="stylesheet" href="css/shThemeDefault.css" media="all">
+  
+</head>
+<body style="background-color:#dadada; background-image:url(images/pattern_1.png)">  
+<div class="body_wrap">
+
+<div class="header_container">
+	<header>
+        <div class="header_left">
+		   	<div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+            <strong>Law Office - Premium WordPress Theme</strong>
+            </div>
+        </div>
+        
+        <div class="header_right">
+        	<nav id="topmenu">            
+	            <ul class="dropdown">
+	                <li class="menu-item-home"><a href="index.html"><span>Home</span></a></li>	                
+	                <li class="current-menu-ancestor"><a href="#"><span>Pages</span></a>
+	                	<ul>
+                        	<li><a href="about.html"><span>About us</span></a></li>	                    	
+	                        <li class="current-menu-ancestor"><a href="#"><span>Shortcodes</span></a>
+	                            <ul>                                
+	                                <li><a href="shortcodes-buttons.html"><span>Buttons & Lists</span></a></li>
+                                    <li><a href="shortcodes-text.html"><span>Text & Images</span></a></li>
+                                    <li class="current-menu-item"><a href="shortcodes-tabs.html"><span>Tabs & Toggles</span></a></li>
+                                    <li><a href="shortcodes-charts.html"><span>Charts</span></a></li>
+                                    <li><a href="shortcodes-columns.html"><span>Columns</span></a></li>
+                                    <li><a href="shortcodes-lightbox.html"><span>Lightbox</span></a></li>
+	                                <li><a href="shortcodes-tables.html"><span>Tables & Boxes</span></a></li>
+	                                <li><a href="shortcodes-media.html"><span>Media (Videos & Img)</span></a></li>
+	                                <li><a href="shortcodes-maps.html"><span>Maps & Locations</span></a></li>                                
+	                                <li><a href="shortcodes-typography.html"><span>Typography</span></a></li>
+	                                <li><a href="shortcodes-widgets.html"><span>Widgets</span></a></li>
+	                            </ul>
+	                        </li>
+	                        <li><a href="blog.html"><span>Blog - Sidebar Right</span></a></li>
+	                    	<li><a href="blog-sidebar-l.html"><span>Blog - Sidebar Left</span></a></li>
+                            <li><a href="#"><span>Backgrounds</span></a>
+                            	<ul>                                
+	                                <li><a href="page-bg-1.html"><span>Style Pattern 1</span></a></li>
+									<li><a href="page-bg-2.html"><span>Style Pattern 2</span></a></li>
+                                    <li><a href="page-bg-3.html"><span>Style Pattern 3</span></a></li>
+	                            </ul>
+                            </li>	
+							<li><a href="page-pricing.html"><span>Pricing Page</span></a></li>
+	                    </ul>
+	                </li>
+                    <li><a href="services.html"><span>Services</span></a></li>
+                    <li><a href="cases.html"><span>Case Studies</span></a></li>
+	                <li><a href="careers.html"><span>Careers</span></a></li>                          
+	                <li><a href="contact.html"><span>Contact</span></a></li>
+	            </ul>                
+			</nav>
+        	<!--/ topmenu -->
+        </div>
+        <div class="clear"></div>			    
+	</header>
+
+</div>
+
+<div class="container">
+<!-- middle -->
+<div id="middle" class="cols2 sidebar_left noimage">
+	
+    <div class="content" role="main">
+    		
+            <script type="text/javascript">
+					SyntaxHighlighter.defaults['gutter'] = false;
+					SyntaxHighlighter.defaults['toolbar'] = true;		
+					SyntaxHighlighter.all();
+			</script>   
+                    
+    		<article class="post-item post-detail">
+                    <h1>Shortcodes: Tabs & Toggles</h1>
+			                  
+            	<div class="entry">                 	
+                	
+                  <h2>Framed Tabs Example:</h2>
+                        <!-- tabs in text -->
+				<div class="tabs_framed">
+                
+					<ul class="tabs">
+                        <li><a href="#tabs_1_1">Tab 1</a></li>
+                        <li><a href="#tabs_1_2">Tab 2</a></li>
+                        <li><a href="#tabs_1_3">Tab 3</a></li>
+                        <li><a href="#tabs_1_4">Tab 4</a></li>
+                    </ul>
+                    
+                    <div id="tabs_1_1" class="tabcontent">
+                    	<div class="inner">
+              
+						
+                       <!-- pricing table -->
+                        <div class="pricing_box">
+                            <ul>
+                                <li class="price_col">
+                                    <div class="price_item">                                        
+                                        <div class="price_col_head">
+                                            <strong>STARTER</strong> 
+                                          <span class="price"><em>$</em>14<sup>.99</sup><em>/mo.</em></span>
+                                      </div>
+                                        
+                                        <div class="price_col_body">
+                                            <ul>
+												<li><strong>10GB</strong> Storage Space</li>
+												<li><strong>50GB</strong>  Bandwidth</li>
+												<li><strong>10 Free</strong> Sub-Domains</li>
+												<li><strong>250</strong> E-mail Accounts</li>
+												<li>Control Panel & FTP</li>
+												<li>No Shared 128bit SSL</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="price_col_foot">
+                                            <a href="#" class="button_link"><span>Sign up NOW</span></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li class="price_col col_active">
+                                    <div class="price_item">                                        
+                                        <div class="price_col_head head_green_dark">
+                                            <strong>ADVANCED</strong> 
+                                            <span class="price"><em>$</em>24<sup>.99</sup><em>/mo.</em></span>   
+                                        </div>
+                                        
+                                        <div class="price_col_body">
+                                            <ul>
+												<li><strong>250GB</strong> Storage Space</li>
+												<li><strong>20,000GB</strong>  Bandwidth</li>
+												<li><strong>30 Free</strong> Sub-Domains</li>
+												<li><strong>500</strong> E-mail Accounts</li>
+												<li>Control Panel & FTP</li>
+												<li>No Shared 128bit SSL</li>
+                                            </ul>                                           
+                                        </div>
+                                        
+                                        <div class="price_col_foot">
+                                            <a href="#" class="button_link"><span>Sign up NOW</span></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li class="price_col">
+                                    <div class="price_item">                                        
+                                        <div class="price_col_head head_red">
+                                            <strong>PROFESSIONAL</strong>
+                                            <span class="price"><em>$</em>89<sup>.99</sup><em>/mo.</em></span>
+                                        </div>
+                                        
+                                        <div class="price_col_body">
+                                            <ul>
+												<li><strong>500GB</strong> Storage Space</li>
+												<li><strong>40,000GB</strong>  Bandwidth</li>
+												<li><strong>50 Free</strong> Sub-Domains</li>
+												<li><strong>Unlimted</strong> E-mail Accounts</li>
+												<li>Control Panel & FTP</li>
+												<li>No Shared 128bit SSL</li>
+                                            </ul>
+                                        </div>        
+                                        
+                                        <div class="price_col_foot">
+                                            <a href="#" class="button_link"><span>Sign up NOW</span></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                
+                                
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                        <!--/ pricing table -->
+                       		
+						</div>
+                    </div>
+                    
+                    <div id="tabs_1_2" class="tabcontent">
+                    	<div class="inner">
+                    	<h3>Tab 2 content Title</h3>
+						<p><img src="images/temp/entry_img_small_1.jpg" width="90" height="90" alt="" class="frame_right"> when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Lorem Ipsum has been the industry's standard dummy text ever since theok a galley of type and scra.</p>
+                        <p>>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        
+                        </div>
+					</div>
+                    
+                    <div id="tabs_1_3" class="tabcontent">
+                    	<div class="inner">
+                        <p><img src="images/temp/entry_img_small_2.jpg" width="90" height="90" alt="" class="alignleft">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Lorem Ipsum has been the industry's standard </p>
+                    	
+                        </div>
+                    </div>
+                    
+                    <div id="tabs_1_4" class="tabcontent">
+                    	<div class="inner">
+                       	<h3>Tab 4 content Title</h3>
+                    	<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Lorem Ipsum has been the industry's standard dummy text ever since theok a galley of type and scra.</p>
+                        </div>
+                    </div>
+                    
+                    
+				</div>
+        	<!--/ tabs in text -->
+                
+           
+<pre class="brush: plain">
+[framed_tabs tab1="Tab 1" tab2="Tab 2" tab3="Tab 3" tab4="Tab 4"]
+    [tab]Tab content 1[/tab]
+    [tab]Tab content 2[/tab]
+    [tab]Tab content 3[/tab]
+    [tab]Tab content 4[/tab]
+[/framed_tabs]
+</pre>
+            	
+                <h2><span>Small</span> Framed Tabs </h2>                	
+                    <div class="tabs_framed small_tabs">
+                
+                    <ul class="tabs">
+                        <li><a href="#tabs_2_1">Tab 1</a></li>
+                        <li><a href="#tabs_2_2">Tab 2</a></li>
+                        <li><a href="#tabs_2_3">Tab 3</a></li>
+                    </ul>
+                    
+                    <div id="tabs_2_1" class="tabcontent">
+                    	<div class="inner">
+                       	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Lorem Ipsum has been the industry's standard dummy text ever since theok a galley of type and scra.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="tabs_2_2" class="tabcontent">
+                    	<div class="inner">
+						<p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. </p>
+						<p>Lorem Ipsum has been the industry's standard dummy text ever since theok a galley of type and scra.</p>
+                        </div>
+	              	</div>
+                    
+                    <div id="tabs_2_3" class="tabcontent">
+                    	<div class="inner">
+                    	<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. Lorem Ipsum has been the industry's standard dummy text ever since theok a galley of type and scra.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+<pre class="brush: plain">
+[framed_tabs type="small" tab1="Tab 1" tab2="Tab 2" tab3="Long Tab 3" tab4="T4"]
+    [tab]Tab content 1[/tab]
+    [tab]Tab content 2[/tab]
+    [tab]Tab content 3[/tab]
+    [tab]Tab content 4[/tab]
+[/framed_tabs]
+</pre>        
+
+				<h2>Toggle Content:</h2>
+
+				<h3 class="toggle box">Toggle Content (Click to Open) <span class="ico"></span></h3>
+                        <div class="toggle_content boxed">
+                        <p>Every one of our wp themes, comes with extensive documentation and video tutorials that help you install, set up, and edit your theme and you don't even need a lot of wp knowledge or programming skills like js, or php. The thing we are most proud of when we talk about support, it our AfterCare Support Forums that you can access any time and receive guidance and solutions to your issues directly from the ThemeFuse developers</p>
+                        </div>
+                    
+<pre class="brush: plain">
+[toggle_content title="Toggle Content (Click to Open)" type=&quot;boxed&quot; style="box_blue"]
+toogle content here...
+[/toggle_content]
+</pre>
+                    	<h2>Toggle <span>FAQ</span></h2>
+                    
+            			<h3 class="toggle box">Toggle Content (Click to Open) <span class="ico"></span></h3>
+                        <div class="toggle_content boxed">                        	
+                            <div class="faq_question toggle"><span class="faq_q">Q:</span> <span class="faq_title">What AfterCare services do you offer?</span> <span class="ico"></span></div>
+                        	<div class="faq_answer toggle_content">
+                        	<p>Every one of our wp themes, comes with extensive documentation and video tutorials that help you install, set up, and edit your theme and you don't even need a lot of wp knowledge or programming skills like js, or php. The thing we are most proud of when we talk about support, it our AfterCare Support Forums that you can access any time and receive guidance and solutions to your issues directly from the ThemeFuse developers</p>
+						</div>
+                        
+                        <div class="faq_question toggle"><span class="faq_q">Q:</span> <span class="faq_title">How do i get in touch with you?</span> <span class="ico"></span></div>
+                        <div class="faq_answer toggle_content">
+                        <p>First of all we recommend you to check the product detail page. We try to make this page as complete as we can, so you'll find there description, features and live demo preview access.</p>
+                        <p>However, if you still have some questions, you can use the direct contact form from the contact page. Don't forget to select "Pre purchase question" from the list of subjects. </p>
+                        </div>
+                        
+                        <div class="faq_question toggle"><span class="faq_q">Q:</span> <span class="faq_title">How do I install a fresh copy of WordPress?</span> <span class="ico"></span></div>
+                        <div class="faq_answer toggle_content">
+                        This has to be. One for all and all for one, Muskehounds are always ready. One for all and all for one, helping everybody. One for all and all for one, can sound pretty corny. 
+                        </div>
+                            	
+                        </div>
+                    
+<pre class="brush: plain">
+[toggle_content title="Toggle Content (Click to expand)" type=&quot;boxed&quot; style="box_blue"]
+	[toggle_content title="What AfterCare services do you offer?" type="faq"]
+	answere 1 here
+	[/toggle_content]
+
+    [toggle_content title="Question here?" type="faq"]
+    answere 2 here
+    [/toggle_content]
+	...
+[/toggle_content]    
+</pre>  
+
+				<div class="clear"></div>
+				</div>               
+                <!--/ post details -->
+                
+		  </article>    
+
+    	
+	</div>
+    <!--/ content -->
+    
+    <!-- sidebar -->
+    <div class="sidebar">
+    	
+        <!-- widget_search -->
+        <div class="widget-container widget_search">
+			<form method="get" action="#">
+				<div>
+				<label class="screen-reader-text" for="s">Search for:</label>
+				<input type="text" name="s" id="s" class="inputField" onblur="if (this.value == '') {this.value = 'Search this blog';}" onfocus="if (this.value == 'Search this blog') {this.value = '';}" value="Search this blog">
+				<input type="submit" id="searchsubmit" class="btn-submit" value="Search">				
+                <div class="clear"></div>
+				</div>
+			</form>			
+		</div>
+    	<!--/ widget_search -->
+        
+        <!-- widget_categories -->
+        <div class="widget-container widget_categories">
+        	<img src="images/icons/widget_icon_03.png" alt="" class="widget_icon">  
+			<h3 class="widget-title">Shortcode categories:</h3>
+				<ul>
+					<li><a href="shortcodes-buttons.html"><span>Buttons & Lists</span></a></li>
+					<li><a href="shortcodes-text.html"><span>Text & Images</span></a></li>
+					<li class="current-menu-item"><a href="shortcodes-tabs.html"><span>Tabs & Toggles</span></a></li>
+					<li><a href="shortcodes-charts.html"><span>Charts</span></a></li>
+					<li><a href="shortcodes-columns.html"><span>Columns</span></a></li>
+					<li><a href="shortcodes-lightbox.html"><span>Lightbox</span></a></li>
+					<li><a href="shortcodes-tables.html"><span>Tables & Boxes</span></a></li>
+					<li><a href="shortcodes-media.html"><span>Media (Videos & Img)</span></a></li>
+					<li><a href="shortcodes-maps.html"><span>Maps & Locations</span></a></li>                                
+					<li><a href="shortcodes-typography.html"><span>Typography</span></a></li>
+					<li><a href="shortcodes-widgets.html"><span>Widgets</span></a></li>
+				</ul>
+		</div>  
+        <!--/ widget_categories -->  
+        
+        <!-- widget_text -->
+        <div class="widget-container widget_text boxed_text">
+            <div class="textwidget">               
+                <p><a href="#">Shortcodes</a> is a WordPress-specific code that lets you do nifty things with very little effort. </p>
+				<p>Shortcodes can embed files or create objects that would normally require lots of complicated, ugly code in just one line. Shortcode = shortcut.</p>
+				<p>For example, the following shortcode would add a photo gallery into the page:</p>
+				<p><mark>[gallery]</mark></p>
+				<p>Shortcodes can be with additional attributes as the following example shows: </p>
+				<p><mark>[gallery id="27" size="medium"]</mark></p>
+				<p>WordPress does offer some of the <a href="http://en.support.wordpress.com/shortcodes/" target="_blank">shortcodes by default</a> (for example the gallery one) and plugins can add their own as well via the <a href="http://codex.wordpress.org/Shortcode_API" target="_blank">Shortcode API</a>.</p>
+            </div>
+		</div>
+        <!--/ widget_text -->
+        
+                 
+               
+    </div> 
+    <!--/ sidebar -->           
+    <div class="clear"></div>	    
+</div>
+<!--/ middle --> 
+</div>
+<!--/ container -->
+
+<footer>
+<div class="container">
+
+	<div class="fcol f_col_1">
+    
+    	<!-- widget contacts -->
+		<div class="widget-container widget_contact">                    
+			<h3>Contact us at:</h3>     
+			<div class="contact-address">
+				<div class="address">Via Ludovisi 39-45, Rome, 54267, Italy</div>
+				<div class="phone">Phone: <span>1.800.245.356</span> Fax: <span>1.800.245.357</span></div>
+                <div class="mail">Email: <a href="mailto:hello@LawOffice.org">hello@LawOffice.org</a></div>
+			</div>    
+		</div>
+		<!--/ widget contacts -->  
+          
+    </div>
+    <!--/ f_col_1 -->
+    
+    <div class="fcol f_col_2">
+    
+    	<!-- widget widget_nav_menu -->
+		<div class="widget-container widget_nav_menu">
+			<h3 class="widget-title">About us:</h3>
+			<ul>
+				<li><a href="#"><span>Our History</span></a></li>                            
+				<li><a href="#"><span>Our Clients</span></a></li>                        	
+				<li><a href="#"><span>Partners</span></a></li>  
+				<li><a href="#"><span>Meet the Team</span></a></li>  
+			</ul>
+		</div>
+        <!-- widget widget_nav_menu -->
+        
+    </div>
+    <!--/ f_col_2 -->
+    
+    <div class="fcol f_col_3">
+    
+    	<!-- widget widget_nav_menu -->
+		<div class="widget-container widget_nav_menu">
+			<h3 class="widget-title">Services:</h3>
+			<ul>
+				<li><a href="#"><span>General Practice</span></a></li>                            
+				<li><a href="#"><span>Business Law</span></a></li>                        	
+				<li><a href="#"><span>Mediation</span></a></li>  
+				<li><a href="#"><span>Civil Defense Law</span></a></li>  
+                <li><a href="#"><span>Family Law</span></a></li>  
+			</ul>
+		</div>
+        <!-- widget widget_nav_menu -->
+
+    </div>
+    <!--/ f_col_3 -->
+    
+    <div class="fcol f_col_4">
+    
+    	<!-- widget widget_categories -->
+		<div class="widget-container widget_categories">
+			<h3 class="widget-title">Case Studies:</h3>
+			<ul>
+				<li><a href="#"><span>Medical Malpraxis</span></a></li>                            
+				<li><a href="#"><span>DUI cases</span></a></li>                        	
+				<li><a href="#"><span>Mediation cases</span></a></li>  
+				<li><a href="#"><span>Family Law cases</span></a></li> 
+                <li><a href="#"><span>Other studies</span></a></li> 
+			</ul>
+		</div>
+        <!-- widget widget_categories -->               
+        
+    </div>
+    <!--/ f_col_4 -->
+    
+    <div class="fcol f_col_5">
+    
+    	<!-- widget widget_nav_menu -->
+		<div class="widget-container widget_nav_menu">
+			<h3 class="widget-title">Careers:</h3>
+			<ul>
+				<li><a href="#"><span>Available Jobs</span></a></li>                            
+				<li><a href="#"><span>Internship</span></a></li>                        	
+				<li><a href="#"><span>Send your Resume</span></a></li>  
+			</ul>
+		</div>
+        <!-- widget widget_nav_menu -->
+       
+    </div>
+    <!--/ f_col_5 -->
+    
+    <div class="divider_space_thin"></div>
+    
+    <div class="footer_social">
+    	<strong>Follow us on:</strong>
+		<a href="#" class="link-fb">Facebook</a>
+        <a href="#" class="link-twitter">Twitter</a>
+        <a href="#" class="link-rss">RSS</a>                                   
+    </div>
+    
+    <div class="copyright">
+    	<p>copyright 2012 - <strong>Law & Legal WordPress theme</strong> <br> made by <a href="http://themefuse.com">Themefuse</a> - Premium WordPress themes</p>
+    </div>
+    
+</div>
+</footer>
+
+</div>
+</body>
+</html>
