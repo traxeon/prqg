@@ -267,7 +267,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 select {
-	height:20px;
+	height:35px;
 	line-height:20px}
 
 textarea{
