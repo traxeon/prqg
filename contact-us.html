@@ -101,50 +101,89 @@
                 
                 
                 <!-- contact form -->
-                        <div class="add-comment" id="addcomments">
-                            
-                            <div class="comment-form">
-                            <form action="#" method="post" id="contactForm" class="ajax_form">
-                                
-                                <div class="row alignleft infieldlabel">
-                                    <label for="name">Enter your first and last name*</label>
-                                    <input type="text" id="name" name="yourname" value="" class="inputtext input_middle required">
+                        <div class="quform-outer quform-theme-light-light">
+        <form class="quform" action="quform/process.php" method="post" enctype="multipart/form-data">
+
+            <div class="quform-inner">
+                <h3 class="quform-title">Contact form</h3>
+                <p class="quform-description">Please get in touch using the form below.</p>
+
+                <div class="quform-elements">
+
+                    <!-- Begin 2 column Group -->
+                    <div class="quform-group-wrap quform-group-style-plain quform-group-alignment-left">
+                        <div class="quform-group-elements">
+
+                            <div class="quform-group-row quform-group-row-2cols">
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text">
+                                    <div class="quform-spacer">
+                                        <label for="name">Name <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="name" type="text" name="name" />
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <div class="space"></div>
-                                
-                                <div class="row alignleft infieldlabel">
-                                    <label for="email">Enter your email address*</label>
-                                    <input type="text" id="email" name="email" value="" class="inputtext input_middle required">
+                                <!-- End Text input element -->
+
+                                <!-- Begin Text input element -->
+                                <div class="quform-element quform-element-text">
+                                    <div class="quform-spacer">
+                                        <label for="email">Email address <span class="quform-required">*</span></label>
+                                        <div class="quform-input">
+                                            <input id="email" type="text" name="email" />
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <div class="clear"></div>   
-                                
-                                <div class="row alignleft selectField">
-                                    <select class="select_styled" name="subject" id="subject" title="Select Subject">
-                                            <option value="0">Select Subject*</option>
-                                            <option value="1">New Member</option>
-                                            <option value="2">Other</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="space"></div>                               
-                               
-                                
-                              <div class="clear"></div>   
-                                
-                                <div class="row infieldlabel">
-                                    <label for="message">Enter your message*</label>
-                                    <textarea id="message" cols="30" rows="10" name="message" class="textarea textarea_middle required"></textarea>
-                                </div>
-                                
-                                <div class="row rowSubmit">
-                                <input type="submit" id="send" value="SEND YOUR MESSAGE" class="btn-submit">                                
-                                <a onclick="document.getElementById('commentForm').reset();return false" href="#" class="link-reset" hidefocus="true" style="outline: none;">clear the form</a>
-                              </div>
-                            </form>
+                                <!-- End Text input element -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End 2 column Group -->
+
+                    <!-- Begin Textarea element -->
+                    <div class="quform-element quform-element-textarea quform-huge">
+                        <div class="quform-spacer">
+                            <label for="message">Message <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <textarea id="message" name="message" class="quform-textarea"></textarea>
                             </div>
                         </div>
+                    </div>
+                    <!-- End Textarea element -->
+
+                    <!-- Begin Captcha element -->
+                    <div class="quform-element quform-element-captcha">
+                        <div class="quform-spacer">
+                            <label for="type_the_word">Type the word <span class="quform-required">*</span></label>
+                            <div class="quform-input">
+                                <input id="type_the_word" type="text" name="type_the_word" />
+                            </div>
+                            <div class="quform-captcha">
+                                <div class="quform-captcha-inner">
+                                    <img src="quform/images/captcha/courier-new-light.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Captcha element -->
+
+                    <!-- Begin Submit button -->
+                    <div class="quform-submit">
+                        <div class="quform-submit-inner">
+                            <button type="submit"><span><em>Send</em></span></button>
+                        </div>
+                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                    </div>
+                    <!-- End Submit button -->
+               </div>
+           </div>
+        </form>
+    </div>
+ 
                 <!--/ contact form -->
                 
               <div class="clear"></div>
