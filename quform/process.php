@@ -164,7 +164,7 @@ $config['smtp'] = array(
     'host' => 'smtp.gmail.com',
     'port' => 465,
     'username' => 'kenneth.kauffman@gmail.com',
-    'password' => 'yarzpzjqehxxwkbq',
+    'password' => '${{ secrets.SMTP_PWD }}',
     'encryption' => 'ssl'
 );
 
@@ -236,7 +236,7 @@ $form->addElement($message);
 $recaptcha = new Quform_Element('g-recaptcha-response', 'reCAPTCHA');
 $recaptcha->addValidator('required');
 $recaptcha->addValidator('recaptcha', array(
-    'secretKey' => '6LcmeEAdAAAAABrtkEz9RQB1EinnvzXAb9-j6kFC',
+    'secretKey' => '${{ secrets.CAPTCHA_KEY_SRV }}',
     'version' => 'v3',
     'threshold' => 0.5
 ));
