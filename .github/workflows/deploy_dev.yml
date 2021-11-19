@@ -1,29 +1,21 @@
-name: Node CI
-
-on: [push]
+name: Development Deploy (RSYNC over SSH)
+on:
+  push:
+    branches:
+    - master
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Install Node.js
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v2
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@5.1
       with:
-        node-version: '10.x'
-    - name: Install npm dependencies
-      run: npm install
-    - name: Run build task
-      run: npm run build --if-present
-    - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@main
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY_DEV }}
-          ARGS: "-rltgoDzvO --delete"
-          SOURCE: "dist/"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: "/dist/, /node_modules/"
+        switches: -avzr --delete
+        path: src/
+        remote_path: ${{ secrets.REMOTE_PATH_DEV }}
+        remote_host: ${{ secrets.REMOTE_HOST_DEV }}
+        remote_port: ${{ secrets.REMOTE_HOST_DEV_PORT }}
+        remote_user: ${{ secrets.REMOTE_USER_DEV }}
+        remote_key: ${{ secrets.SSH_KEY_DEV }}
