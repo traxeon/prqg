@@ -1,8 +1,7 @@
 name: Development Deploy (RSYNC over SSH)
+
 on:
-  push:
-    branches:
-    - master
+  workflow_dispatch:
 
 jobs:
   deploy:
