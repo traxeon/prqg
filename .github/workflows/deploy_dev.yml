@@ -15,6 +15,6 @@ jobs:
         path: src/
         remote_path: ${{ secrets.REMOTE_PATH_DEV }}
         remote_host: ${{ secrets.REMOTE_HOST_DEV }}
-        remote_port: ${{ secrets.REMOTE_HOST_DEV_PORT }}
+        remote_port: ${{ secrets.REMOTE_HOST_PORT_DEV }}
         remote_user: ${{ secrets.REMOTE_USER_DEV }}
         remote_key: ${{ secrets.SSH_KEY_DEV }}
