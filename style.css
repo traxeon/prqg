@@ -224,7 +224,7 @@ hr { border: solid #d4d4d4; border-width: 1px 0 0; clear: both; margin: 10px 0 2
 
 /* Links 
 ======================================================== */
-a, a:visited { color: #0045D7; text-decoration: none; outline:none; }
+a, a:visited { color: #0045D7; text-decoration: underline; outline:none; }
 a:hover, a:focus { color: #d70000; }
 
 /* Lists

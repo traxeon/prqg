@@ -5,7 +5,7 @@
  * your form. It's useful to have this enabled while developing your form, but
  * you should set this to false on production sites.
  */
-define('QUFORM_DEBUG', true);
+define('QUFORM_DEBUG', false);
 
 /** DO NOT CHANGE THESE 2 LINES **/
 define('QUFORM_ROOT', realpath(dirname(__FILE__)));
@@ -39,7 +39,7 @@ $config['email'] = true;
  *     'recipient2@example.com'
  * );
  */
-$config['recipients'] = 'ken.kauffman@me.com';
+$config['recipients'] = 'prqgsomd@gmail.com';
 
 /**
  * Set the "From" address of the emails. You should set this to the contact
@@ -161,11 +161,11 @@ $config['uploadUrl'] = '';
  * encryption - SMTP encryption (e.g. ssl or tls)
  */
 $config['smtp'] = array(
-    'host' => 'smtp.gmail.com',
-    'port' => 465,
-    'username' => 'kenneth.kauffman@gmail.com',
-    'password' => '${{ secrets.SMTP_PWD }}',
-    'encryption' => 'ssl'
+    'host' => 'email-smtp.us-east-2.amazonaws.com',
+    'port' => 587,
+    'username' => 'AKIA4JTKA2SUFUNFBUXQ',
+    'password' => 'BEC/Zom4Q3Ah+5JvQDtUihIU+tZHdownmU1r122u7cig',
+    'encryption' => 'tls'
 );
 
 /**
@@ -236,7 +236,7 @@ $form->addElement($message);
 $recaptcha = new Quform_Element('g-recaptcha-response', 'reCAPTCHA');
 $recaptcha->addValidator('required');
 $recaptcha->addValidator('recaptcha', array(
-    'secretKey' => '${{ secrets.CAPTCHA_KEY_SRV }}',
+    'secretKey' => '6Ld7J7QdAAAAAMaHbdgxSwUhrSeEwXMPgSFhg8Yd',
     'version' => 'v3',
     'threshold' => 0.5
 ));
